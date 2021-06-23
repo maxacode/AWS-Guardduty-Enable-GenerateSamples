@@ -1,4 +1,3 @@
-GD-Documentations.txt - has all the documentations on how I completed the homework. 
 
 GuardDutySetupBoto.py - Is the script doing evrything. 
 
