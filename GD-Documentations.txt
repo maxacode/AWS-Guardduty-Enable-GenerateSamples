@@ -1,0 +1,25 @@
+THis is the document with all the steps taken:
+
+1. Enable GD in account. - https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-ug.pdf#AWS_GuardDuty
+    A. I could use a Cloudformation template to enable GD but I was going to use the SDK anyways for other steps so just used SDK for it all. 
+    B. Used BOTO3 to create multiple functions that link together to accomplish goal: 
+        getDetectorFunc() - Gets the ID of the Guard Duty detector - if present good if not then another function gets triggered to run. 
+        deleteDetectorFunc() - Function to delete guard duty if a new one wants to get initilized by user. 
+        enableGDFunc() - Enabling Guard Duty detector -
+
+2. Exporting Guardduty findings to S3 - https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_exportfindings.html
+    A. STILL NEED TO IMPLEMENT THIS. 
+
+3. Generate Sample Findings - https://github.com/awslabs/amazon-guardduty-tester, https://docs.aws.amazon.com/guardduty/latest/ug/sample_findings.html
+    A. Generating Sample Findings - can do all 
+        createAllSampleFindings() - Generating sample findings. 
+        
+
+4. Get Findings IDs and Save them. 
+    A. Savings the findings 
+        getFindingIDs() - Getting the IDS of all the findings so they can be used to export the findings 
+        getFindingsResults() - Get the finding exported via JSON to folder with Findings. 
+        
+
+
+ 
